@@ -67,7 +67,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "div{\r\n    width:100%;\r\n    height: 100%;\r\n    background-image: url('1.jpg');\r\n    background-size:100%;\r\n    position: absolute;\r\n    margin-left:-16px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsYUFBYTtJQUNiLCtCQUF5QztJQUN6QyxxQkFBcUI7SUFDckIsbUJBQW1CO0lBQ25CLGtCQUFrQjtDQUNyQiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2e1xyXG4gICAgd2lkdGg6MTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uL2Fzc2V0cy8xLmpwZ1wiKTtcclxuICAgIGJhY2tncm91bmQtc2l6ZToxMDAlO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbWFyZ2luLWxlZnQ6LTE2cHg7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -283,7 +283,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<a [routerLink]=\"['/']\">\n  <h1>My Store</h1>\n</a>\n<div style=\"width:800px\">\n<a [routerLink]=\"['/cart']\" class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>用户</a>\n<a [routerLink]=\"['/cart']\" class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>个人信息</a>\n<a [routerLink]=\"['/cart']\" class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>帮助</a>\n<a  (click)=\"checkout()\" class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>登出</a>\n</div>"
+module.exports = "<a [routerLink]=\"['/']\">\n  <h1>Happy Coding</h1>\n</a>\n<div style=\"width:800px\">\n<a  [routerLink]=\"['/']\"  class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>主页</a>\n<a  class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>进入游戏</a>\n<a   class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>新手教程</a>\n\n  <a  *ngIf=\"login==true\" class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>个人信息</a>\n<a  *ngIf=\"login==true\" (click)=\"checkout()\" class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>登出</a>\n\n  <a  [routerLink]=\"['/loginpage']\" *ngIf=\"login==false\" class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>登录</a>\n  <a  [routerLink]=\"['/registpage']\" *ngIf=\"login==false\" class=\"button fancy-button\" style=\"margin-right:50px\"><i class=\"material-icons\">shopping_cart</i>注册</a>\n\n</div>"
 
 /***/ }),
 
@@ -310,8 +310,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var HeaderComponent = /** @class */ (function () {
     function HeaderComponent() {
+        this.login = false;
     }
     HeaderComponent.prototype.ngOnInit = function () {
+        this.login = Boolean(localStorage.getItem("login"));
     };
     HeaderComponent.prototype.checkout = function () {
         alert("成功退出登录");
@@ -340,7 +342,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "body{\r\n    margin:0px;\r\n    padding:0px;\r\n    font-family:sans-serif;\r\n    background-size:cover;\r\n}\r\n.box{\r\n    position:absolute;\r\n    top:50%;\r\n    left:50%;\r\n    transform:translate(-50%,-50%);\r\n    /*实现块元素百分比下居中*/\r\n    width:450px;\r\n    padding:50px;\r\n    background: rgba(0,0,0,.8);\r\n    box-sizing:border-box;\r\n    box-shadow: 0px 15px 25px rgba(0,0,0,.5);\r\n    border-radius:15px;\r\n}\r\n.box h2{\r\n    margin:0 0 30px;\r\n    padding:0;\r\n    color: #fff;\r\n    text-align:center;\r\n}\r\n.box .inputbox{\r\n    position:relative;\r\n}\r\n.box .inputbox input{\r\n    width: 100%;\r\n    padding:10px 0;\r\n    font-size:16px;\r\n    color:#fff;\r\n    letter-spacing: 1px;\r\n    margin-bottom: 30px;\r\n    border:none;\r\n    border-bottom: 1px solid #fff;\r\n    outline:none;\r\n    background: transparent;\r\n}\r\n.box .inputbox label{\r\n    position:absolute;\r\n    top:0px;\r\n    left:0px;\r\n    padding:10px 0;\r\n    font-size: 16px;\r\n    color:#fff;\r\n    pointer-events:none;\r\n    transition:.5s;\r\n}\r\n.box .inputbox input:focus ~ label,\r\n.box .inputbox input:valid ~ label\r\n{\r\n    top:-18px;\r\n    left:0;\r\n    color:#03a9f4;\r\n    font-size:14px;\r\n}\r\n.box input[type=\"submit\"]\r\n{\r\n    background: transparent;\r\n    border:none;\r\n    outline:none;\r\n    font-size: 16px;\r\n    color:#fff;\r\n    background: #03a9f4;\r\n    padding:15px 20px;\r\n    cursor: pointer;\r\n    border-radius:10px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7SUFDWCxZQUFZO0lBQ1osdUJBQXVCO0lBQ3ZCLHNCQUFzQjtDQUN6QjtBQUNEO0lBQ0ksa0JBQWtCO0lBQ2xCLFFBQVE7SUFDUixTQUFTO0lBQ1QsK0JBQStCO0lBQy9CLGVBQWU7SUFDZixZQUFZO0lBQ1osYUFBYTtJQUNiLDJCQUEyQjtJQUMzQixzQkFBc0I7SUFDdEIseUNBQXlDO0lBQ3pDLG1CQUFtQjtDQUN0QjtBQUNEO0lBQ0ksZ0JBQWdCO0lBQ2hCLFVBQVU7SUFDVixZQUFZO0lBQ1osa0JBQWtCO0NBQ3JCO0FBQ0Q7SUFDSSxrQkFBa0I7Q0FDckI7QUFDRDtJQUNJLFlBQVk7SUFDWixlQUFlO0lBQ2YsZUFBZTtJQUNmLFdBQVc7SUFDWCxvQkFBb0I7SUFDcEIsb0JBQW9CO0lBQ3BCLFlBQVk7SUFDWiw4QkFBOEI7SUFDOUIsYUFBYTtJQUNiLHdCQUF3QjtDQUMzQjtBQUNEO0lBQ0ksa0JBQWtCO0lBQ2xCLFFBQVE7SUFDUixTQUFTO0lBQ1QsZUFBZTtJQUNmLGdCQUFnQjtJQUNoQixXQUFXO0lBQ1gsb0JBQW9CO0lBQ3BCLGVBQWU7Q0FDbEI7QUFDRDs7O0lBR0ksVUFBVTtJQUNWLE9BQU87SUFDUCxjQUFjO0lBQ2QsZUFBZTtDQUNsQjtBQUNEOztJQUVJLHdCQUF3QjtJQUN4QixZQUFZO0lBQ1osYUFBYTtJQUNiLGdCQUFnQjtJQUNoQixXQUFXO0lBQ1gsb0JBQW9CO0lBQ3BCLGtCQUFrQjtJQUNsQixnQkFBZ0I7SUFDaEIsbUJBQW1CO0NBQ3RCIiwiZmlsZSI6InNyYy9hcHAvbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHl7XHJcbiAgICBtYXJnaW46MHB4O1xyXG4gICAgcGFkZGluZzowcHg7XHJcbiAgICBmb250LWZhbWlseTpzYW5zLXNlcmlmO1xyXG4gICAgYmFja2dyb3VuZC1zaXplOmNvdmVyO1xyXG59XHJcbi5ib3h7XHJcbiAgICBwb3NpdGlvbjphYnNvbHV0ZTtcclxuICAgIHRvcDo1MCU7XHJcbiAgICBsZWZ0OjUwJTtcclxuICAgIHRyYW5zZm9ybTp0cmFuc2xhdGUoLTUwJSwtNTAlKTtcclxuICAgIC8q5a6e546w5Z2X5YWD57Sg55m+5YiG5q+U5LiL5bGF5LitKi9cclxuICAgIHdpZHRoOjQ1MHB4O1xyXG4gICAgcGFkZGluZzo1MHB4O1xyXG4gICAgYmFja2dyb3VuZDogcmdiYSgwLDAsMCwuOCk7XHJcbiAgICBib3gtc2l6aW5nOmJvcmRlci1ib3g7XHJcbiAgICBib3gtc2hhZG93OiAwcHggMTVweCAyNXB4IHJnYmEoMCwwLDAsLjUpO1xyXG4gICAgYm9yZGVyLXJhZGl1czoxNXB4O1xyXG59XHJcbi5ib3ggaDJ7XHJcbiAgICBtYXJnaW46MCAwIDMwcHg7XHJcbiAgICBwYWRkaW5nOjA7XHJcbiAgICBjb2xvcjogI2ZmZjtcclxuICAgIHRleHQtYWxpZ246Y2VudGVyO1xyXG59XHJcbi5ib3ggLmlucHV0Ym94e1xyXG4gICAgcG9zaXRpb246cmVsYXRpdmU7XHJcbn1cclxuLmJveCAuaW5wdXRib3ggaW5wdXR7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHBhZGRpbmc6MTBweCAwO1xyXG4gICAgZm9udC1zaXplOjE2cHg7XHJcbiAgICBjb2xvcjojZmZmO1xyXG4gICAgbGV0dGVyLXNwYWNpbmc6IDFweDtcclxuICAgIG1hcmdpbi1ib3R0b206IDMwcHg7XHJcbiAgICBib3JkZXI6bm9uZTtcclxuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZmZmO1xyXG4gICAgb3V0bGluZTpub25lO1xyXG4gICAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XHJcbn1cclxuLmJveCAuaW5wdXRib3ggbGFiZWx7XHJcbiAgICBwb3NpdGlvbjphYnNvbHV0ZTtcclxuICAgIHRvcDowcHg7XHJcbiAgICBsZWZ0OjBweDtcclxuICAgIHBhZGRpbmc6MTBweCAwO1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG4gICAgY29sb3I6I2ZmZjtcclxuICAgIHBvaW50ZXItZXZlbnRzOm5vbmU7XHJcbiAgICB0cmFuc2l0aW9uOi41cztcclxufVxyXG4uYm94IC5pbnB1dGJveCBpbnB1dDpmb2N1cyB+IGxhYmVsLFxyXG4uYm94IC5pbnB1dGJveCBpbnB1dDp2YWxpZCB+IGxhYmVsXHJcbntcclxuICAgIHRvcDotMThweDtcclxuICAgIGxlZnQ6MDtcclxuICAgIGNvbG9yOiMwM2E5ZjQ7XHJcbiAgICBmb250LXNpemU6MTRweDtcclxufVxyXG4uYm94IGlucHV0W3R5cGU9XCJzdWJtaXRcIl1cclxue1xyXG4gICAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XHJcbiAgICBib3JkZXI6bm9uZTtcclxuICAgIG91dGxpbmU6bm9uZTtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxuICAgIGNvbG9yOiNmZmY7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMDNhOWY0O1xyXG4gICAgcGFkZGluZzoxNXB4IDIwcHg7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICBib3JkZXItcmFkaXVzOjEwcHg7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -351,7 +353,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>用户登录</title>\r\n</head>\r\n<body>\r\n用户名:<input  type=\"text\" [(ngModel)]=\"username\"><br>\r\n密码:<input  type=\"password\" [(ngModel)]=\"password\"> <br>\r\n<button (click)=\"login()\">登录</button>\r\n\r\n</body>\r\n"
+module.exports = "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <link rel=\"stylesheet\">\r\n</head>\r\n<body>\r\n<div class=\"box\">\r\n  <h2>Login</h2>\r\n\r\n    <div class=\"inputbox\">\r\n      <input  type=\"text\" [(ngModel)]=\"username\">\r\n      <label>Username</label>\r\n    </div>\r\n    <div class=\"inputbox\">\r\n      <input  type=\"text\" [(ngModel)]=\"password\">\r\n      <label>Password</label>\r\n    </div>\r\n    <button (click)=\"login()\">登录</button>\r\n    <br>\r\n    <br>\r\n    <span>No account?</span>&nbsp;&nbsp;&nbsp;<a [routerLink]=\"['/registpage']\">click here to create</a>\r\n\r\n</div>\r\n</body>\r\n</html>"
 
 /***/ }),
 
@@ -426,7 +428,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlZ2lzdC9yZWdpc3QuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "body{\r\n    margin:0px;\r\n    padding:0px;\r\n    font-family:sans-serif;\r\n    background-size:cover;\r\n}\r\n.box{\r\n    position:absolute;\r\n    top:50%;\r\n    left:50%;\r\n    transform:translate(-50%,-50%);\r\n    /*实现块元素百分比下居中*/\r\n    width:450px;\r\n    padding:50px;\r\n    background: rgba(0,0,0,.8);\r\n    box-sizing:border-box;\r\n    box-shadow: 0px 15px 25px rgba(0,0,0,.5);\r\n    border-radius:15px;\r\n}\r\n.box h2{\r\n    margin:0 0 30px;\r\n    padding:0;\r\n    color: #fff;\r\n    text-align:center;\r\n}\r\n.box .inputbox{\r\n    position:relative;\r\n}\r\n.box .inputbox input{\r\n    width: 100%;\r\n    padding:10px 0;\r\n    font-size:16px;\r\n    color:#fff;\r\n    letter-spacing: 1px;\r\n    margin-bottom: 30px;\r\n    border:none;\r\n    border-bottom: 1px solid #fff;\r\n    outline:none;\r\n    background: transparent;\r\n}\r\n.box .inputbox label{\r\n    position:absolute;\r\n    top:0px;\r\n    left:0px;\r\n    padding:10px 0;\r\n    font-size: 16px;\r\n    color:#fff;\r\n    pointer-events:none;\r\n    transition:.5s;\r\n}\r\n.box .inputbox input:focus ~ label,\r\n.box .inputbox input:valid ~ label\r\n{\r\n    top:-18px;\r\n    left:0;\r\n    color:#03a9f4;\r\n    font-size:14px;\r\n}\r\n.box input[type=\"submit\"]\r\n{\r\n    background: transparent;\r\n    border:none;\r\n    outline:none;\r\n    font-size: 16px;\r\n    color:#fff;\r\n    background: #03a9f4;\r\n    padding:15px 20px;\r\n    cursor: pointer;\r\n    border-radius:10px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVnaXN0L3JlZ2lzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWix1QkFBdUI7SUFDdkIsc0JBQXNCO0NBQ3pCO0FBQ0Q7SUFDSSxrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLFNBQVM7SUFDVCwrQkFBK0I7SUFDL0IsZUFBZTtJQUNmLFlBQVk7SUFDWixhQUFhO0lBQ2IsMkJBQTJCO0lBQzNCLHNCQUFzQjtJQUN0Qix5Q0FBeUM7SUFDekMsbUJBQW1CO0NBQ3RCO0FBQ0Q7SUFDSSxnQkFBZ0I7SUFDaEIsVUFBVTtJQUNWLFlBQVk7SUFDWixrQkFBa0I7Q0FDckI7QUFDRDtJQUNJLGtCQUFrQjtDQUNyQjtBQUNEO0lBQ0ksWUFBWTtJQUNaLGVBQWU7SUFDZixlQUFlO0lBQ2YsV0FBVztJQUNYLG9CQUFvQjtJQUNwQixvQkFBb0I7SUFDcEIsWUFBWTtJQUNaLDhCQUE4QjtJQUM5QixhQUFhO0lBQ2Isd0JBQXdCO0NBQzNCO0FBQ0Q7SUFDSSxrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLFNBQVM7SUFDVCxlQUFlO0lBQ2YsZ0JBQWdCO0lBQ2hCLFdBQVc7SUFDWCxvQkFBb0I7SUFDcEIsZUFBZTtDQUNsQjtBQUNEOzs7SUFHSSxVQUFVO0lBQ1YsT0FBTztJQUNQLGNBQWM7SUFDZCxlQUFlO0NBQ2xCO0FBQ0Q7O0lBRUksd0JBQXdCO0lBQ3hCLFlBQVk7SUFDWixhQUFhO0lBQ2IsZ0JBQWdCO0lBQ2hCLFdBQVc7SUFDWCxvQkFBb0I7SUFDcEIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQixtQkFBbUI7Q0FDdEIiLCJmaWxlIjoic3JjL2FwcC9yZWdpc3QvcmVnaXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5e1xyXG4gICAgbWFyZ2luOjBweDtcclxuICAgIHBhZGRpbmc6MHB4O1xyXG4gICAgZm9udC1mYW1pbHk6c2Fucy1zZXJpZjtcclxuICAgIGJhY2tncm91bmQtc2l6ZTpjb3ZlcjtcclxufVxyXG4uYm94e1xyXG4gICAgcG9zaXRpb246YWJzb2x1dGU7XHJcbiAgICB0b3A6NTAlO1xyXG4gICAgbGVmdDo1MCU7XHJcbiAgICB0cmFuc2Zvcm06dHJhbnNsYXRlKC01MCUsLTUwJSk7XHJcbiAgICAvKuWunueOsOWdl+WFg+e0oOeZvuWIhuavlOS4i+WxheS4rSovXHJcbiAgICB3aWR0aDo0NTBweDtcclxuICAgIHBhZGRpbmc6NTBweDtcclxuICAgIGJhY2tncm91bmQ6IHJnYmEoMCwwLDAsLjgpO1xyXG4gICAgYm94LXNpemluZzpib3JkZXItYm94O1xyXG4gICAgYm94LXNoYWRvdzogMHB4IDE1cHggMjVweCByZ2JhKDAsMCwwLC41KTtcclxuICAgIGJvcmRlci1yYWRpdXM6MTVweDtcclxufVxyXG4uYm94IGgye1xyXG4gICAgbWFyZ2luOjAgMCAzMHB4O1xyXG4gICAgcGFkZGluZzowO1xyXG4gICAgY29sb3I6ICNmZmY7XHJcbiAgICB0ZXh0LWFsaWduOmNlbnRlcjtcclxufVxyXG4uYm94IC5pbnB1dGJveHtcclxuICAgIHBvc2l0aW9uOnJlbGF0aXZlO1xyXG59XHJcbi5ib3ggLmlucHV0Ym94IGlucHV0e1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBwYWRkaW5nOjEwcHggMDtcclxuICAgIGZvbnQtc2l6ZToxNnB4O1xyXG4gICAgY29sb3I6I2ZmZjtcclxuICAgIGxldHRlci1zcGFjaW5nOiAxcHg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAzMHB4O1xyXG4gICAgYm9yZGVyOm5vbmU7XHJcbiAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI2ZmZjtcclxuICAgIG91dGxpbmU6bm9uZTtcclxuICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG59XHJcbi5ib3ggLmlucHV0Ym94IGxhYmVse1xyXG4gICAgcG9zaXRpb246YWJzb2x1dGU7XHJcbiAgICB0b3A6MHB4O1xyXG4gICAgbGVmdDowcHg7XHJcbiAgICBwYWRkaW5nOjEwcHggMDtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxuICAgIGNvbG9yOiNmZmY7XHJcbiAgICBwb2ludGVyLWV2ZW50czpub25lO1xyXG4gICAgdHJhbnNpdGlvbjouNXM7XHJcbn1cclxuLmJveCAuaW5wdXRib3ggaW5wdXQ6Zm9jdXMgfiBsYWJlbCxcclxuLmJveCAuaW5wdXRib3ggaW5wdXQ6dmFsaWQgfiBsYWJlbFxyXG57XHJcbiAgICB0b3A6LTE4cHg7XHJcbiAgICBsZWZ0OjA7XHJcbiAgICBjb2xvcjojMDNhOWY0O1xyXG4gICAgZm9udC1zaXplOjE0cHg7XHJcbn1cclxuLmJveCBpbnB1dFt0eXBlPVwic3VibWl0XCJdXHJcbntcclxuICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xyXG4gICAgYm9yZGVyOm5vbmU7XHJcbiAgICBvdXRsaW5lOm5vbmU7XHJcbiAgICBmb250LXNpemU6IDE2cHg7XHJcbiAgICBjb2xvcjojZmZmO1xyXG4gICAgYmFja2dyb3VuZDogIzAzYTlmNDtcclxuICAgIHBhZGRpbmc6MTVweCAyMHB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgYm9yZGVyLXJhZGl1czoxMHB4O1xyXG59Il19 */"
 
 /***/ }),
 
@@ -437,7 +439,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>用户注册</title>\n</head>\n<body>\n<form action=\"/regist\" method=\"post\">\n  用户名:<input name=\"username\" type=\"text\"/><br>\n  密码:<input name=\"password\" type=\"password\"> <br>\n  <input type=\"submit\" value=\"注册\">\n</form>\n</body>\n"
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <link rel=\"stylesheet\">\n</head>\n<body>\n<div class=\"box\">\n  <h2>Regist</h2>\n\n    <div class=\"inputbox\">\n      <input  type=\"text\" [(ngModel)]=\"username\">\n      <label>Username</label>\n    </div>\n    <div class=\"inputbox\">\n      <input  type=\"text\" [(ngModel)]=\"password\">\n      <label>Password</label>\n    </div>\n    <div class=\"inputbox\">\n      <input  type=\"text\" [(ngModel)]=\"email\">\n      <label>Email</label>\n    </div>\n    <button (click)=\"regist()\">注册</button>\n\n</div>\n</body>\n</html>"
 
 /***/ }),
 
@@ -452,6 +454,7 @@ module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegistComponent", function() { return RegistComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/@angular/http.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -462,10 +465,33 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var RegistComponent = /** @class */ (function () {
-    function RegistComponent() {
+    function RegistComponent(http, jsonp) {
+        this.http = http;
+        this.jsonp = jsonp;
+        this.headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]({ 'Content-Type': 'application/json' });
     }
     RegistComponent.prototype.ngOnInit = function () {
+    };
+    RegistComponent.prototype.regist = function () {
+        var url = "/regist";
+        var post_data = { "username": this.username, "password": this.password, "email": this.email };
+        //    var post_data={"username":this.username,"password":this.password};
+        this.http.post(url, JSON.stringify(post_data), { headers: this.headers }).subscribe(function (data) {
+            var temp = JSON.parse(data['_body']);
+            console.log(temp);
+            var bol = temp['success'];
+            localStorage.setItem("login", bol);
+            if (bol) {
+                window.open('/', '_self');
+            }
+            else {
+                alert("用户名已经存在,注册失败");
+            }
+        }, function (err) {
+            console.log(err['_body']);
+        });
     };
     RegistComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -473,7 +499,7 @@ var RegistComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./regist.component.html */ "./src/app/regist/regist.component.html"),
             styles: [__webpack_require__(/*! ./regist.component.css */ "./src/app/regist/regist.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"], _angular_http__WEBPACK_IMPORTED_MODULE_1__["Jsonp"]])
     ], RegistComponent);
     return RegistComponent;
 }());
@@ -489,7 +515,7 @@ var RegistComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3N0YXJ0L3N0YXJ0LmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "/*.start*/\r\n/*{*/\r\n/*margin-left:600px;*/\r\n/*margin-top:300px;*/\r\n/*background-color:yellow*/\r\n/*}*/\r\ndiv{\r\n    margin-left:800px;\r\n    margin-top:300px;\r\n}\r\nh1{\r\n    text-align:center\r\n}\r\nbutton{\r\n    margin-left:50%;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3RhcnQvc3RhcnQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxVQUFVO0FBQ1YsS0FBSztBQUNELHNCQUFzQjtBQUN0QixxQkFBcUI7QUFDckIsMkJBQTJCO0FBQy9CLEtBQUs7QUFHTDtJQUNJLGtCQUFrQjtJQUNsQixpQkFBaUI7Q0FDcEI7QUFDRDtJQUNJLGlCQUFpQjtDQUNwQjtBQUNEO0lBQ0ksZ0JBQWdCO0NBQ25CIiwiZmlsZSI6InNyYy9hcHAvc3RhcnQvc3RhcnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qLnN0YXJ0Ki9cclxuLyp7Ki9cclxuICAgIC8qbWFyZ2luLWxlZnQ6NjAwcHg7Ki9cclxuICAgIC8qbWFyZ2luLXRvcDozMDBweDsqL1xyXG4gICAgLypiYWNrZ3JvdW5kLWNvbG9yOnllbGxvdyovXHJcbi8qfSovXHJcblxyXG5cclxuZGl2e1xyXG4gICAgbWFyZ2luLWxlZnQ6ODAwcHg7XHJcbiAgICBtYXJnaW4tdG9wOjMwMHB4O1xyXG59XHJcbmgxe1xyXG4gICAgdGV4dC1hbGlnbjpjZW50ZXJcclxufVxyXG5idXR0b257XHJcbiAgICBtYXJnaW4tbGVmdDo1MCU7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -500,7 +526,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<button *ngIf=\"login==false\" [routerLink]=\"['/guidepage']\">游玩</button>\r\n<button *ngIf=\"login==true\" [routerLink]=\"['/successpage']\">游玩</button>"
+module.exports = "<div>\r\n\r\n    <h1> Learning Computational Thinking</h1>\r\n    <br>\r\n   <h2>&nbsp; &nbsp; 基于 Google Blockly 的计算思维训练平台。结合 Google Blockly强大的功能打破编程语言的边界，无需学习编程语言就可进行计算思维的训练，为初入编程大门的人提供一个易于学习的平台。</h2>\r\n\r\n<button *ngIf=\"login==false\" [routerLink]=\"['/loginpage']\">开始游玩</button>\r\n<button *ngIf=\"login==true\" [routerLink]=\"['/successpage']\">开始游玩</button>\r\n</div>\r\n<!--<img src=\"../../assets/1.jpg\">-->"
 
 /***/ }),
 
@@ -699,7 +725,7 @@ can be found in the LICENSE file at http://angular.io/license
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\大三下\高级web\angulars\test\Lab2.1_Code-Angular_Demo-master\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\大三下\高级web\angulars\test\pj\src\main.ts */"./src/main.ts");
 
 
 /***/ })

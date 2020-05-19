@@ -8,11 +8,16 @@ import { Http,Jsonp,Headers} from '@angular/http';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+    login=false;
+    constructor() {
 
-  ngOnInit(): void {
-  }
-  checkout(){
+    }
+
+    ngOnInit() {
+        this.login=Boolean(localStorage.getItem("login"));
+    }
+
+    checkout(){
     alert("成功退出登录");
     localStorage.removeItem("login");
       window.open('/','_self');
